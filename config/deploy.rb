@@ -4,7 +4,7 @@ set :application, "auth"
 set :repo_url, ENV['REPO_URL']
 
 set :rvm_type, :system
-set :rvm_ruby_version, '2.3.1@rails522'
+set :rvm_ruby_version, '2.5.1@rails5.2.2'
 
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
