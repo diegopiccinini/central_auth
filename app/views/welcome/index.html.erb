@@ -1,0 +1,36 @@
+<div class="container">
+  <%= render partial: 'navbar' %>
+  <%= render partial: "form", locals: { environments: @app_environments } %>
+  <h4><%= @total_sites %> sites found with your filter.</h4>
+  <hr />
+  <%= will_paginate @sites %>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Stage Box</th>
+          <th>Site</th>
+          <th>Action</th>
+          <th>Stage Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sites.each do |site| %>
+          <% site.oauth_applications_sites.each do |app_site| %>
+          <tr>
+            <td><%= app_site.oauth_application.name %></td>
+            <td class="app"><%= site.login_url %></td>
+            <td>
+              <%= link_to 'login', site.app_uri , class: 'btn btn-primary', target: '_blank' %>
+            </td>
+            <td><%= app_site.oauth_application.application_environment.name %></td>
+          </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+
+    </table>
+
+  </div>
+</div>
+
