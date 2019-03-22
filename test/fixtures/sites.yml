@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: <%= back_uri 'test1' %>
+  status: 1
+  step: MyString
+
+two:
+  url: <%= back_uri 'test2' %>
+  status: 1
+  step: MyString
+
+everybody:
+  url: <%= back_uri 'everybody' %>
+  status: 1
+  step: enabled

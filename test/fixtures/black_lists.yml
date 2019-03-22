@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  site: one
+  log: MyText1
+  times: 1
+
+two:
+  site: two
+  log: MyText2
+  times: 1
