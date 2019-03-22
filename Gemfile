@@ -34,11 +34,33 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
+#
 gem 'bootsnap', '>= 1.1.0', require: false
+
+
+gem 'activeadmin', '~> 1.4'
+gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'doorkeeper', '4.4.0'
+gem 'devise', '~> 4.6.0'
+gem 'omniauth-google-oauth2'
+gem 'dotenv-rails'
+gem 'activeadmin_blaze_theme'
+gem 'encryptor'
+gem 'faraday'
+gem 'acts-as-taggable-on', '~> 6.0'
+gem 'sucker_punch', '~> 2.0'
+gem 'google-id-token', '>= 1.4.0'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano3-puma'
+  gem 'webmock'
+  gem 'guard'
 end
 
 group :development do
@@ -52,10 +74,13 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'database_cleaner'
+  gem 'rails-controller-testing'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'guard-minitest'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
