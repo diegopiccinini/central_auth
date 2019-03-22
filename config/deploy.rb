@@ -8,7 +8,7 @@ set :rvm_ruby_version, '2.5.1@rails5.2.2'
 
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-append :linked_files, "config/database.yml", "config/secrets.yml", ".env.production", "config/puma.rb"
+append :linked_files, "config/database.yml", "config/secrets.yml", ".env.production", "config/puma.rb", ".env"
 
 append :linked_dirs, "log", "tmp"
 
