@@ -1,7 +1,7 @@
 lock "~> 3.11.0"
 
 set :application, "auth"
-set :repo_url, "git@github.com:diegopiccinini/central_auth.git"
+set :repo_url, ENV['REPO_URL']
 
 set :rvm_type, :system
 set :rvm_ruby_version, '2.3.1@rails522'
