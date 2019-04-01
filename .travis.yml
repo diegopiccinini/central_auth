@@ -1,0 +1,10 @@
+addons:
+  mariadb: '10.0'
+sudo: false
+language: ruby
+rvm:
+  - 2.4.2
+before_install: gem install bundler -v 1.16.1
+script:
+  - ./bin/travis_setup.sh
+
