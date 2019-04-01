@@ -1,4 +1,4 @@
-class RemoveUrlToBlackList < ActiveRecord::Migration
+class RemoveUrlToBlackList < ActiveRecord::Migration[4.2]
 
   def up
     BlackList.delete_all

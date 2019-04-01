@@ -1,4 +1,4 @@
-class CreateGoogleCertificates < ActiveRecord::Migration
+class CreateGoogleCertificates < ActiveRecord::Migration[4.2]
   def change
     create_table :google_certificates do |t|
       t.string :key, index: { unique: true }

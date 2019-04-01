@@ -1,4 +1,4 @@
-class CreateOauthApplicationsSites < ActiveRecord::Migration
+class CreateOauthApplicationsSites < ActiveRecord::Migration[4.2]
   def change
     create_table :oauth_applications_sites do |t|
       t.belongs_to :site, index: true, foreign_key: true

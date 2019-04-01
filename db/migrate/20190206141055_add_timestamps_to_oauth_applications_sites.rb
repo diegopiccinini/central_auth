@@ -1,4 +1,4 @@
-class AddTimestampsToOauthApplicationsSites < ActiveRecord::Migration
+class AddTimestampsToOauthApplicationsSites < ActiveRecord::Migration[4.2]
   def change
     add_column :oauth_applications_sites, :created_at, :datetime, null: false
     add_column :oauth_applications_sites, :updated_at, :datetime, null: false

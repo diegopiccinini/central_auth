@@ -1,4 +1,4 @@
-class AddIndexExternalIdToOauthApplication < ActiveRecord::Migration
+class AddIndexExternalIdToOauthApplication < ActiveRecord::Migration[4.2]
   def change
     add_index :oauth_applications, :external_id, unique: true
   end

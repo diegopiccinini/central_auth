@@ -1,4 +1,4 @@
-class CreateApplicationEnvironments < ActiveRecord::Migration
+class CreateApplicationEnvironments < ActiveRecord::Migration[4.2]
   def change
     create_table :application_environments do |t|
       t.string :name , limit: 20

@@ -1,4 +1,4 @@
-class CreateOauthApplicationsUsers < ActiveRecord::Migration
+class CreateOauthApplicationsUsers < ActiveRecord::Migration[4.2]
   def change
     create_table :oauth_applications_users do |t|
       t.belongs_to :user, index: true, foreign_key: true

@@ -1,4 +1,4 @@
-class AddApplicationEnvironmentToOauthApplication < ActiveRecord::Migration
+class AddApplicationEnvironmentToOauthApplication < ActiveRecord::Migration[4.2]
   def change
 
     app_env= ApplicationEnvironment.find_by name: 'Unknown'

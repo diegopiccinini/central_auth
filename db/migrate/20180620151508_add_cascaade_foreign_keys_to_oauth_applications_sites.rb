@@ -1,4 +1,4 @@
-class AddCascaadeForeignKeysToOauthApplicationsSites < ActiveRecord::Migration
+class AddCascaadeForeignKeysToOauthApplicationsSites < ActiveRecord::Migration[4.2]
 
   def up
     remove_foreign_key :oauth_applications_sites, :sites

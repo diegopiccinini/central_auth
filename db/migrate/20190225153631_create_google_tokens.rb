@@ -1,4 +1,4 @@
-class CreateGoogleTokens < ActiveRecord::Migration
+class CreateGoogleTokens < ActiveRecord::Migration[4.2]
   def change
     create_table :google_tokens do |t|
       t.string :token, limit: 1500

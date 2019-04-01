@@ -1,4 +1,4 @@
-class CreateSiteUser < ActiveRecord::Migration
+class CreateSiteUser < ActiveRecord::Migration[4.2]
   def change
     create_join_table :sites, :users do |t|
       t.references :site, foreign_key: true, on_delete: :cascade

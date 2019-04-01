@@ -7,6 +7,8 @@ require 'google_sign_in/validator'
 require 'google_sign_in/identity'
 
 GoogleCertificate.create_test_certificate
+key_pem=File.expand_path File.join(Rails.root,'test','key.pem')
+GOOGLE_PRIVATE_KEY = OpenSSL::PKey::RSA.new File.read(key_pem)
 
 if GoogleCertificate.in_effect.count < 1
   raise "Test certificate is expired."
