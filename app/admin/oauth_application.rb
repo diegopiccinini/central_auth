@@ -14,8 +14,8 @@ ActiveAdmin.register OauthApplication, as: "Applications" do
     column :updated_at
     actions do |app|
       span ' | '
-      a 'Update Sites', update_sites_admin_application_path(app), class: 'c-button c-button--ghost-success'
-      a 'Frontend', admin_frontends_path + "?app_id=#{app.id}", class: 'c-button c-button--ghost'
+      a 'Update Sites', href: update_sites_admin_application_path(app), class: 'c-button c-button--ghost-success'
+      a 'Frontend', href: (admin_frontends_path + "?app_id=#{app.id}"), class: 'c-button c-button--ghost'
     end
   end
 
